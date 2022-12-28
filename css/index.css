@@ -1,0 +1,329 @@
+@charset "utf-8";
+/* System Fonts as used by Apple */
+body {
+    -ms-overflow-style: none;
+    font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+/*특정 부분 스크롤바 없애기*/ 
+body::-webkit-scrollbar { 
+    display:none;
+}
+#wrap {
+    /* 모바일이니까 px 쓰면 안됨 */
+    width: 100%;
+    border: 8px solid #fff;
+    background-color: #fafafa;
+}
+
+/* rem 단위 기준 10px로 맞추기 */
+html {
+    font-size: 62.5%;
+}
+
+
+/* ============== Header ====================== */
+.header {
+    padding: 24px;
+    background-color: #313132;
+    /* 플렉스 */
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    /* 상단고정 */
+    position:fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ================================================ */
+/* 모바일 햄버거 메뉴 효과 */
+/* ================================================ */
+
+/* A. 햄버거 메뉴 그리기 */
+input[id="menuicon"] {
+    display: none;
+}
+input[id="menuicon"]+label {
+    margin-top: 14px;
+    display: block;
+    width: 24px;
+    height: 14px;
+    cursor: pointer;
+    /* 위치기준값 */
+    position: relative;
+    z-index: 100;
+}
+input[id="menuicon"]+label span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #fff;
+    /* 포지션 */
+    position: absolute;
+    z-index: 100;
+    /* 트랜지션 */
+    transition: all 0.3s;
+}
+input[id="menuicon"]+label span:nth-child(1) {
+    top: 0;
+}
+input[id="menuicon"]+label span:nth-child(2) {
+    top: 50%;
+    transform: translateY(-50%);
+}
+input[id="menuicon"]+label span:nth-child(3) {
+    bottom: 0;
+}
+
+/* B. 클릭시 X버튼 만들기 */
+input[id="menuicon"]:checked +label span:nth-child(1) {
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+}
+input[id="menuicon"]:checked +label span:nth-child(2) {
+    opacity: 0;
+}
+input[id="menuicon"]:checked +label span:nth-child(3) {
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
+}
+
+/* C. GNB 메뉴 슬라이딩 효과 */
+.header nav[class="mobile_gnb"] {
+    width: 250px !important;
+    height: 1000px !important;
+    background-color: #000 !important;
+    /* 포지션 */
+    position: absolute;
+    /* 로딩시 메뉴 안보이게(width값 만큼) */
+    left: -250px;
+    top: 0;
+    z-index: 99;
+    /* 트랜지션 */
+    transition: all 0.3s;
+}
+
+/* 햄버거 메뉴 클릭시 GNB메뉴 나오도록 코딩 */
+input[id="menuicon"]:checked +label+nav[class="mobile_gnb"] {
+    left: 0;
+}
+
+/* ================================================ */
+
+.header .mobile_gnb {
+    padding: 100px 0 0 0 ;
+    font-family: 'Lato', sans-serif;
+    font-size: 1.2rem;
+    z-index: 999;
+}
+.header .mobile_gnb .gnb>li {
+    height: 42px;
+    line-height: 42px;
+    padding-left: 24px;
+    border-bottom: 1px solid #fff;
+}
+.header .mobile_gnb .gnb>li:hover {
+    background-color: #fff;
+}
+.header .mobile_gnb .gnb>li>a {
+    display: block;
+    color: #fff;
+    /* background-color: red !important; */
+}
+.header .mobile_gnb .gnb>li>a:hover {
+    color: #000;
+    font-weight: 700;
+}
+
+
+
+/* ============= Contents ================= */
+#contents {
+    width: 100%;
+    position: relative;
+    z-index: -999;
+}
+.contents {
+    margin-top: 84px;
+}
+
+.contents > img {
+    width: 100%;
+    height: 100%;
+}
+.contents > div {
+    height: 650px;
+    text-align: center;
+}
+/* Contents 공통 Text  */
+.contents_text h2 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+.contents_text p {
+    font-size: 2.0rem;
+    padding-bottom: 20px;
+}
+
+.contents span {
+    font-size: 1.4rem;
+    color: #2a64c6;
+    margin-right: 10px;
+}
+.contents span::after {
+    content: "\f054";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: #2a64c6;
+}
+
+
+/* 각 컨텐츠별 CSS   */
+.phone {
+    margin-top: 84px;
+}
+.phone img,
+.iphone_pro img {
+    padding-top:80px;
+}
+
+.shopping {
+   background-color: #03012d;
+   margin-bottom: 4px;
+}
+.shopping > .contents_text {
+    color: #fff;
+    margin-top: -60px;
+}
+.shopping > .contents_text >p {
+    line-height: 1.4;
+}
+
+.watch,
+.iphone_pro ,
+.airpods {
+    background-color: #000;
+    margin-bottom: 4px;
+}
+.watch>.contents_text ,
+.airpods > .contents_text{
+    color: #fff;
+}
+.watch > .contents_text >h2 {
+    margin-bottom: 10px;
+}
+.watch img {
+    padding-top:80px;
+}
+
+.iphone_pro>.contents_text {
+    color: #fff;
+    padding-top: 80px;
+}
+
+.ipad {
+    background-color: #fff;
+}
+.ipad>.contents_text {
+    padding-top: 20px;
+}
+.ipad img {
+    margin-top: 20px;
+}
+
+
+
+
+
+
+/* ========== Footer ================ */
+
+footer {
+    padding :20px 16px 0;
+}
+
+.footer_menu dt {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
+    padding: 13px 0 12px;
+    border-bottom: 1px solid #d2d2d7;
+}
+
+.footer_menu dt {
+    background-image: url('../images/mark_plus.png');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 32px 32px;
+    cursor: pointer;
+}
+.footer_menu dd {
+    font-size: 1.2rem;
+}
+
+.footer_text {
+    font-size: 1.2rem;
+    line-height: 1.3;
+    color: #83868b;
+    padding: 20px 0 ;
+}
+.footer_text .conciege {
+    margin-bottom: 24px;
+}
+
+.footer_text .conciege span {
+    color: #2a64c6;
+}
+.footer_text .copyright {
+    margin-bottom: 12px;
+}
+.footer_text nav {
+    font-size: 1.2rem;
+    color: #515154;
+    margin-bottom: 12px;
+    z-index: -50;
+}
+.footer_text nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+.footer_text nav ul li {
+    padding: 0 8px 0 0 ;
+}
+.footer_text nav ul li::after {
+    content: " | ";
+    display: inline-block;
+    /* 포지션 */
+    position: absolute;
+}
+
+/* 스크립트 CSS */
+.footer_sub {
+    padding: 16px 0 ;
+    display: none;
+}
+
+.clicked {
+    display: block !important;
+    border-bottom: 1px solid #d2d2d7;
+}
+.clicked dd {
+    padding: 8px;
+}
+
+.mark {
+    background-image: url('../images/mark_minus.png') !important;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+
+
+
+
+

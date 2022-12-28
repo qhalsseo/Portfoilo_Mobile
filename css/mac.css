@@ -1,0 +1,86 @@
+@charset "utf-8";
+#wrap {
+    background-color: #fff;
+}
+
+/* 맥북 에어 */
+
+.contents .macbook_air {
+    width: 100%;
+    /* height: 700px; */
+    height: 100%;
+    padding-top: 20px;
+    margin-bottom: 10px;
+}
+.contents .macbook_air p{
+    padding-top: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.contents .macbook_air img {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.contents .macbook_air> .btn {
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    margin-top: 20px;
+    margin-right: 10px;
+    line-height: 0.2;
+    border-radius: 20px;
+    background-color: #2a64c6;
+}
+.contents .macbook_air .btn> a {
+    font-size: 1.1rem;
+    color: #fff;
+}
+.contents .macbook_air a  {
+    color: #2a64c6;
+    font-size: 1.1rem;
+   font-weight: 600;
+}
+
+/* 맥북 프로 */
+
+.contents .macbook_pro {
+    width: 100%;
+    /* height: 700px; */
+    height: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background-color: #000;
+}
+.contents .macbook_pro p{
+    padding-top: 10px;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.contents .macbook_pro img {
+    width: 100%;
+    padding-top: 40px;
+}
+
+.contents .macbook_pro> .btn {
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    margin-top: 20px;
+    margin-right: 10px;
+    line-height: 0.2;
+    border-radius: 20px;
+    background-color: #2a64c6;
+}
+.contents .macbook_pro .btn> a {
+    font-size: 1.1rem;
+    color: #fff;
+}
+.contents .macbook_pro a  {
+    color: #2a64c6;
+    font-size: 1.1rem;
+   font-weight: 600;
+}
+

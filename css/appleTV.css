@@ -1,0 +1,80 @@
+@charset "utf-8";
+#wrap {
+    /* 모바일이니까 px 쓰면 안됨 */
+    height: 100%;
+    border: 8px solid #fff;
+    background-color: #fafafa;
+}
+/* tv_배너 */
+.contents .tv_banner {
+    width: 100%;
+    margin-top: 120px;
+}
+.contents .tv_banner h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.contents .tv_banner img{
+    width: 100%;
+}
+.contents .tv_banner .tv_batx > p {
+    padding: 8px;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    font-weight: 600 !important;
+    color: rgb(106, 101, 101);
+}
+
+/* tv_pic */
+.contents .tv_pic {
+    width: 100%;
+    height: 100%;
+}
+.contents .tv_pic img{
+    width: 100%;
+
+}
+
+/* 픽업 / 배송 / 금융 관련 아이콘 */
+.contents  .notice {
+    width: 100%;
+    height: 100%;
+}
+.notice .notice_nav {
+    width: 50%;
+    float: left;
+    /* margin-bottom: 50px; */
+    padding-top: 80px ;
+    padding-bottom: 80px;
+}
+.notice .notice_nav:last-child{
+    margin-top: 18px;
+}
+
+.notice .notice_nav img {
+    width: 20%;
+}
+.notice .notice_nav img :last-child{
+    margin-bottom: 20px;
+}
+.notice .notice_nav h2 {
+    padding-top: 20px;
+    line-height: 1.5;
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+.notice .notice_nav h3 {
+    font-size: 1.2rem;
+    padding: 20px 20px;
+    font-weight: 500;
+    line-height: 1.6;
+}
+.notice .notice_nav>a {
+    color: #2a64c6;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.notice .notice_nav>a:hover{
+    color: silver;
+}

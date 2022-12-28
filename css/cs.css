@@ -1,0 +1,78 @@
+@charset "utf-8";
+#wrap {
+    /* 모바일이니까 px 쓰면 안됨 */
+    width: 100%;
+    border: 8px solid #fff;
+    background-color: #fff;
+}
+.contents {
+    margin-top: 84px;
+}
+/* 배너 */
+.contents> .banner{
+    width: 100%;
+    background-color: red;
+    height: 300px;
+}
+.banner img {
+    width: 100%;
+    height: 100%;
+}
+
+/* CS_Product */
+.cs_product h2 {
+    margin-top: 50px;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: rgb(61, 60, 60);
+}
+/* 공통 TEXT */
+.cs_product p {
+    font-size: 1.8em;
+    padding-top: 20px;
+}
+.cs_product p:hover {
+    color: #2a64c6;
+}
+.cs_product .product_nav {
+    width: 50%;
+    float: left;
+}
+
+.contents>.cs_icon {
+    height: 760px;
+    padding: 40px;
+    border-top: 1px solid rgb(129, 126, 126);
+    border-bottom: 1px solid rgb(129, 126, 126);
+}
+
+.forget > a,
+.fix > a,
+.subscribe > a {
+    color: #2a64c6;
+    font-size: 1.2rem;
+    line-height: 5;
+
+}
+
+.cs_icon .forget,
+.cs_icon .fix{
+    padding: 30px;
+    border-bottom: 1px solid silver;
+}
+.cs_icon .subscribe {
+    padding: 30px;
+}
+.contents>.care {
+    height: 500px;
+}
+.care h2 {
+    padding-top: 50px;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.care p {
+    font-size: 1.4rem;
+    padding-top: 50px;
+    line-height: 2;
+}

@@ -1,0 +1,154 @@
+@charset "utf-8";
+
+/* contents */
+.contents .search {
+    height: 200px;
+}
+.search h1{
+    padding: 50px;
+    font-size: 2.4rem;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+/* Search Form - Hover 검색창 */
+#contents form {
+    margin-top: 20px;
+}
+.box {
+    margin: 0 auto;
+    width: 100%;
+    height: 50px;
+    padding: 0 10px;
+}
+.search_container {
+    width: 100%;
+    /* 포지션 위치기준값 */
+    position: relative;
+}
+/* ::placeholder 접두어 */
+.search_container input#search::-webkit-input-placeholder{
+    color: #fff;
+}
+.search_container input#search::-ms-input-placeholder{
+    color: #fff;
+}
+
+/* 폰트어썸 */
+.search_container .icon {
+    color: #4f5b66;
+    /* 포지션 */
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    margin-top: 17px;
+    margin-left: 17px;
+}
+/* input Form */
+.search_container input#search {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border: 1px solid #000;
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 45px;
+    outline: none;
+    float: left;
+    transition: all 0.5s ease;
+}
+.search_container input#search:hover,
+.search_container input#search:focus,
+.search_container input#search:active {
+    background-color: #2b303b;
+}
+
+/* 맥세이브 */
+.contents>.mag_safe {
+    width: 100%;
+    /* height: 400px; */
+    height: 40%;
+}
+.mag_safe img {
+    width: 100%;
+}
+.mag_safe_text {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.mag_safe_text h2 {
+    margin-top: 50px;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.mag_safe_text p {
+    margin-top: 40px;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+    line-height: 1.4;
+}
+.mag_safe > a {
+    color: #2a64c6;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+/* 배너부분 */
+.contents .ac_content {
+    /* height: 800px; */
+    height: 100%;
+    margin-top: 30px;
+    background-color: #01012a;
+}
+
+.contents .ac_content .banner_text {
+    /* 플롯 */
+    float: left;
+    width: 100%;
+    color: #fff;
+    font-size: 1.8rem;
+    line-height: 2;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+.contents .ac_content  img {
+    width: 100%;
+}
+.contents .ac_content .banner_text h2 {
+    /* padding-top: 40px; */
+}
+.contents .ac_content .banner_text a{
+    color: #2a64c6;
+}
+
+.contents .ac_content .banner_text img {
+    width: 100%;
+}
+
+/* 픽업 / 배송 / 금융 관련 아이콘 */
+.contents  .notice {
+    height:700px;
+}
+.notice .notice_nav {
+    margin-bottom: 50px;
+    padding-top: 20px ;
+}
+.notice .notice_nav:nth-child(1){
+    margin-top: 40px;
+}
+.notice .notice_nav h2 {
+    padding-top: 20px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+.notice .notice_nav h3 {
+    font-size: 1.4rem;
+    padding: 20px 20px;
+}
+.notice .notice_nav>a {
+    color: #2a64c6;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
